@@ -1,0 +1,16 @@
+import React from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
+import Main from './views/Main'
+import './App.css';
+
+function App() {
+  return (
+  <Main/>
+  );
+}
+
+export default App;
