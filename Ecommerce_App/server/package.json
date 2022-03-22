@@ -12,7 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "expess": "0.0.1-security",
     "express": "^4.17.3",
     "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
