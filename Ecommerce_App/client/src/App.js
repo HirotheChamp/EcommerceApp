@@ -11,15 +11,26 @@ import AddProduct from './views/AddProduct'
 import Show from './views/Show'
 import Dashboard from './views/Dashboard'
 import ProductInfo from './views/ProductInfo'
+import Login from './views/Login'
+import Registration from './views/Registration'
+import Profile from './views/Profile'
 import './App.css';
+// import './static/css/LoginRegistration.css';
 
 function App() {
   return (
     <BrowserRouter>
     <Switch>
-    <Route exact path="/">
-      <Main/>
-      </Route>
+    <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/register">
+          <Registration/>
+        </Route>
+        <Route path="/profile">
+          <Profile/>
+        </Route>
+    
       <Route path="/shoppingcart">
           <ShoppingCart />
         </Route>
@@ -38,6 +49,9 @@ function App() {
         <Route path="/productinfo">
           <ProductInfo />
         </Route>
+        <Route exact path="/">
+      <Main/>
+      </Route>
         </Switch>
       </BrowserRouter>
   );

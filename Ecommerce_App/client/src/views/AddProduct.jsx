@@ -8,7 +8,7 @@ function AddProduct() {
         <><Navbar/>
         <div className='container'>
             <input type="search" placeholder="search" id="search" />
-            <button>Add New Product</button>
+            <Link to='/createproduct'><button>Add Product</button></Link>
             <table>
                 <tr>
                     <th>Picture</th>

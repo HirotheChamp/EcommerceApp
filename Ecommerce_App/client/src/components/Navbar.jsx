@@ -7,13 +7,13 @@ function Navbar() {
 
 
           <div className="navbar-brand2">
-              <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+              <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
 
 
-              <a className="nav-link" href="#">Orders</a>
+              <a className="nav-link" href="/dashboard">Orders</a>
 
 
-              <a className="nav-link " href="#">Profile</a>
+              <a className="nav-link " href="/profile">Profile</a>
 
               <div class="dropdown">
                   <button class="dropbtn">Dropdown
@@ -25,9 +25,13 @@ function Navbar() {
                       <a href="#">Link 3</a>
                   </div>
               </div>
-
-
-              <a href="/login"><i className="" style={{ color: "black", fontSize: "20px" }}></i></a>
+    <div class="cart">
+              <a class="active" href="/shoppingcart"><i class="fa fa-fw fa-shopping-cart"></i></a>
+              </div>
+              <div class="cart">
+              <a class="active" href="/login"><i class="fa fa-fw fa-user"></i></a>
+              </div>
+             
           </div>
       </nav><hr></hr></>
   )

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link, useHistory, useParams } from 'react-router-dom'
-import './Login.css';
+// import '../static/css/LoginRegistration.css';
 
 const Login = (props) => {
     const [userName, setUserName] = useState()
@@ -29,7 +29,11 @@ const Login = (props) => {
 
     }
     return (
-        <><div className="center">
+        <>
+        <div class="home">
+ <a href="/"><i class="fa fa-home"  style="color: white; font-size: 50px;"></i></a>
+ </div>
+        <div className="center">
             <h1>Login</h1>
             <form onSubmit={onSubmitHandler}>
                 <div className="txt_field">

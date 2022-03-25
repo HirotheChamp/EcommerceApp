@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, {  Component } from 'react';
+import { Link } from 'react-router-dom'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -10,6 +11,7 @@ return (
             <div className="row mt-5">
 
                 <div className="col">
+                
                     <div className="card" style={{ width: "25rem" }}>
                         <div className="card-body">
                             <input type="search" placeholder="search product" id="search" />
