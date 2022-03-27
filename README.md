@@ -1,9 +1,9 @@
 
 
- <h1 align="center">BugTracker</h1>
+ <h1 align="center">EcommerceApp</h1>
 
 
-<h3>Intuitive project manager app designed for efficiency in organizing bugs/issues in an application</h3>
+<h3>Innovative E-commerce website designed for easy access in navigating products to be purchased.</h3>
 
 <hr></hr>
 
@@ -23,17 +23,16 @@
 <hr></hr>
 
 ## Background
-Organization can be the difference between success and coming up short. For this reason, I decided to create an application that could aid in the success of Developers in the field. BugsyTracker is a user-friendly app that is simple in design to help in field that is very focus-driven. A user can describe a bug whilst also assigning the issue to another member on their team with relative ease.  
+
+With the many E-commerce sites scouring the internet, Duy and I wanted to create one that was easy to navigate and provided reliable functionality. 
 
 
 
 <hr></hr>
 
 ## Features
-* Accepts input from developers on which bugs to address in their program
-* Displays all current bugs that have been submitted
-* Users may delete bugs from database after being addressed
-* contact support section for questions about the application 
+
+currently unavailable
 
 <hr></hr>
 
@@ -63,7 +62,7 @@ Organization can be the difference between success and coming up short. For this
 
 ## Project Status
 
-Bugsy tracker currently has a working form to post bugs. Those bugs can also be deleted from the list. The front end support page has been created as well.
+Mostly clickable prototype is completed, beginning backend developement.
 
 <hr></hr>
 
@@ -76,7 +75,7 @@ Bugsy tracker currently has a working form to post bugs. Those bugs can also be 
 
 ## Acknowledgement
 
-This project came through researching what ideas could be of use to Developers working in their industry
+My friend Duy and I collectively decided to work on this project in order to have a solid project under our belts.
 
 <hr></hr>
 
