@@ -48,6 +48,7 @@ currently unavailable
 
 ## Screenshots
 
+currently unavailable
 
 <hr></hr>
 
@@ -57,6 +58,8 @@ currently unavailable
 <hr></hr>
 
 ## Usage
+
+currently unavailable
 
 <hr></hr>
 
