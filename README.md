@@ -32,7 +32,7 @@ With the many E-commerce sites scouring the internet, Duy and I wanted to create
 
 ## Features
 
-currently unavailable
+N/A
 
 <hr></hr>
 
@@ -48,18 +48,19 @@ currently unavailable
 
 ## Screenshots
 
-currently unavailable
+N/A
 
 <hr></hr>
 
 ## Setup
 
+N/A
 
 <hr></hr>
 
 ## Usage
 
-currently unavailable
+N/A
 
 <hr></hr>
 
