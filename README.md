@@ -76,12 +76,12 @@ Mostly clickable prototype is completed, beginning backend developement.
 ## Acknowledgement
 
 My friend Duy and I collectively decided to work on this project in order to have a solid project under our belts.
-
+Duy approached a bulk of the CSS when we started the front-end developement.
 <hr></hr>
 
 ## Contact
 
-Created by @HirotheChamp - feel free to contact me at 
+Created by @HirotheChamp - feel free to contact me at: 
 
 [![name](	https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kyle-young-173024106/)
 [![name](	https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/KyleYoungins)
