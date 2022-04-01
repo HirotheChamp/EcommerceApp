@@ -60,13 +60,13 @@ N/A
 
 ## Usage
 
-N/A
+The app is used similarly to E-bay or Amazon, in the sense that you can make purchases while tracking those purchases. You may also upload your own products to be surveyed and bought on the app.
 
 <hr></hr>
 
 ## Project Status
 
-Mostly clickable prototype is completed, beginning backend developement.
+Mostly clickable prototype is completed, backend developement implemented but not currently functional.
 
 <hr></hr>
 
@@ -74,6 +74,7 @@ Mostly clickable prototype is completed, beginning backend developement.
 
 * I could have tested code more frequently to ensure less mistakes in the future
 * I should be more organized in how I arranged my folders and files
+* Better communication with teammates
 
 <hr></hr>
 
