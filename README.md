@@ -66,7 +66,7 @@ The app is used similarly to E-bay or Amazon, in the sense that you can make pur
 
 ## Project Status
 
-Mostly clickable prototype is completed, backend developement implemented but not currently functional.
+Mostly clickable prototype is completed, backend developement implemented but not currently functional. CSS developed on most of the pages.
 
 <hr></hr>
 
