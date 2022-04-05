@@ -1,21 +1,50 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar';
+import axios from 'axios'
+
 function CreateProduct() {
+
+    const [productName, setProductName] = useState('');
+    const [imageUrl, setImageUrl] = useState('');
+    const [description, setDescription] = useState('');
+    const [category, setCategory] = useState('');
+   const [errArray, setErrArray] = useState([])
+   
+    const onSubmitHandler = e => {
+        
+        e.preventDefault();
+    
+        axios.post('http://localhost:8000/api/product/', { 
+            productName, imageUrl, description,category
+        })
+            .then(res=> console.log(res))
+            .catch(err=>{ 
+             
+                  const errResponse = err.response.data.errors 
+                  let tempArr = []
+                  for (const key of Object.keys(errResponse)){
+                      tempArr.push(errResponse[key].message)
+                 }
+                  setErrArray(tempArr)
+               
+    })
+}
     return (
         <><Navbar/>
         <div className='container'>
-            <h1> Create Product</h1>
-            <div>
-                <label>Name</label><br />
-                <input type="text" name="product name"></input>
-            </div>
-            <div>
-                <label>Description</label><br />
-                <textarea name="Text1" cols="40" rows="5"></textarea>
-            </div>
-            <div>
-                <label for="cars">Categories:</label><br />
+        <h1> Create Product</h1>
+            <form id='form' onSubmit={onSubmitHandler}>
+            
+            
+                <label>Name
+                <input type="text" id='productName' onChange={(e)=>setProductName(e.target.value)}/>
+                </label>
+                <label>Description
+                <textarea name="Text1" cols="40" rows="5" onChange={(e)=>setDescription(e.target.value)}/>
+                </label>
+           <div>
+                <label htmlFor="cars">Categories:</label><br />
 
                 <select name="shirts" id="shirts">
                     <option value="Hat">Hat</option>
@@ -24,17 +53,20 @@ function CreateProduct() {
                     <option value="audi">Audi</option>
                 </select>
 
-            </div>
+            </div> 
 
-            <div>
-                <label>or add a new category</label><br />
-                <input type="text" name="product name"></input>
-            </div>
-            <div>
-                <label>Images</label> <button>upload</button>
+           
+                <label>or add a new category
+                <input type="text" id='category' onChange={(e)=>setCategory(e.target.value)} />
+                </label>
+            
+                <label>Images
+                <input type="text" id='imageUrl' onChange={(e)=>setImageUrl(e.target.value)}/>
+                </label> 
+                {/* <button>upload</button> */}
 
-            </div>
-            <div>
+          
+            {/* <div>
                 <img src=''>
 
                 </img>
@@ -45,14 +77,22 @@ function CreateProduct() {
                 <label for="imageconfirm">Main</label>
 
 
-            </div>
+            </div> */}
 
 
-            <div>
-                <button>cancel</button>
-                <button>preview</button>
-                <button>update</button>
-            </div>
+           
+             <a href="/addproduct">
+        <button className="button" type="button" role="button">Cancel</button>
+    </a>
+                
+                
+                <button className='add-product' type='submit'>Add to products</button>
+           
+  
+            </form>
+             {
+     errArray.map((err, i)=>(<p key={i}> {err}</p>))
+  } 
         </div><Footer /></>
     )
 }

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/bugtrackerdb", {
+mongoose.connect("mongodb://localhost/productdb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     family:4 
