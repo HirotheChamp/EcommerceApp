@@ -32,7 +32,7 @@ With the many E-commerce sites scouring the internet, Duy and I wanted to create
 
 ## Features
 
-N/A
+* Able to add product, storing the information in a database 
 
 <hr></hr>
 
