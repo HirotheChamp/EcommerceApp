@@ -72,9 +72,9 @@ Mostly clickable prototype is completed, backend developement implemented but no
 
 ## Room for Improvement
 
-* I could have tested code more frequently to ensure less mistakes in the future
-* I should be more organized in how I arranged my folders and files
-* Better communication with teammates
+* Code will be tested more frequently to ensure less mistakes in the future
+* Folders and files will be organized in a more concise manner
+* Communication will be handled more professionally 
 
 <hr></hr>
 
