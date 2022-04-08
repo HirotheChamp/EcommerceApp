@@ -5,13 +5,29 @@ module.exports.index = (request, response) => {
     });
 }
 
+// register: (req, res) => {
+//     User.create(req.body)
+//       .then(user => {
+//           const userToken = jwt.sign({
+//               id: user._id
+//           }, process.env.SECRET_KEY);
+   
+//           res
+//               .cookie("usertoken", userToken, secret, {
+//                   httpOnly: true
+//               })
+//               .json({ msg: "success!", user: user });
+//       })
+//       .catch(err => res.json(err));
+//   }
+
 //create
 module.exports.createUser = (request, response) => {
     const {    userName, 
-       email, password, passwordConfirm} = request.body;
+       email, password} = request.body;
     User.create({
         userName, 
-        email, password, passwordConfirm
+        email, password
     })
         .then(newUser => response.json(newUser)) //add validations
         .catch(err => response.status(400).json(err));

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link, useHistory, useParams } from 'react-router-dom'
-// import '../static/css/LoginRegistration.css';
+ import '../static/css/LoginRegistration.css';
 
 const Login = (props) => {
     const [userName, setUserName] = useState()
@@ -24,37 +24,50 @@ const Login = (props) => {
         e.preventDefault()
 
         axios.post('http://localhost:8000/api/user/', {
-            userName, email, password, confirmPassword
+            userName, email, password
+        })
+            .then(res=> console.log(res))
+            .catch(err=>{ 
+                console.log(err)
+                // const errResponse = err.response.data.errors 
+                // let tempArr = []
+                // for (const key of Object.keys(errResponse)){
+                //     tempArr.push(errResponse[key].message)
+                // }
+                // setErrArray(tempArr)
+
+  
         })
 
     }
     return (
-        <>
-        <div class="home">
- <a href="/"><i class="fa fa-home"  style="color: white; font-size: 50px;"></i></a>
+        <><div className='body'>
+        <div className="home">
+ <a href="/"><i className="fa fa-home"  style={{color: "white", fontSize: "50px"}}></i></a>
  </div>
         <div className="center">
             <h1>Login</h1>
             <form onSubmit={onSubmitHandler}>
                 <div className="txt_field">
-                    <input type="text" path="email" required="required" onChange={(e) => setEmail(e.target.value)} value={email} />
+                    <input type="text" path="email" required="required" onChange={(e) => setEmail(e.target.value)}  />
                     <span></span>
                     <label path="email">Email</label>
                 </div>
-                <errors path="email" class="text-danger" />
+               
                 <div className="txt_field">
-                    <input type="password" path="password" required="required" onChange={(e) => setPassword(e.target.value)} value={password} />
+                    <input type="password" path="password" required="required" onChange={(e) => setPassword(e.target.value)} />
                     <span></span>
                     <label path="password">Password</label>
                 </div>
-                <errors path="password" class="text-danger" />
+                
                 <div className="pass">Forgot Password?</div>
-                <input type="submit" value="Login" />
-                <div class="signup_link">
+                <input type="submit" id="completed" value="Login" />
+                <div className="signup_link">
                     Not a member?<Link to="/register">Sign up</Link>
                 </div>
             </form>
 
+        </div>
         </div></>
     )
 

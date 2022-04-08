@@ -49,7 +49,7 @@ function AddProduct() {
                      { products && products.map((product, i)=>(
                      <tr>
                              <td>{product.imageUrl}</td>
-                             <td>2</td>
+                             <td>{product.id}</td>
                              <td>{product.productName}</td>
                              <td>{product.description}</td>
                              <td>2 (inventory count)</td>
