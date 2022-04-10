@@ -12,7 +12,6 @@
 * [Background](#background)
 * [Features](#features)
 * [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -46,11 +45,6 @@ With the many E-commerce sites scouring the internet, Duy and I wanted to create
 
 
 
-## Screenshots
-
-N/A
-
-<hr></hr>
 
 ## Setup
 
