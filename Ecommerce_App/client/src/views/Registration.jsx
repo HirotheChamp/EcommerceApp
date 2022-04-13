@@ -11,9 +11,9 @@ const Registration = (props) => {
     const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+  
 
-    const history = useHistory()
+    
     const [errArray, setErrArray] = useState([])
 
     const onSubmitHandler = e => {
@@ -27,7 +27,7 @@ const Registration = (props) => {
 
 
         axios.post('http://localhost:8000/api/user', {
-            userName, email, password
+            userName, email, password, 
         })
                 .then(res=> console.log(res))
                 .catch(err=>{ 
@@ -74,13 +74,7 @@ const Registration = (props) => {
                     <span></span>
                     <label path="password">Password</label>
                 </div>
-                {/* <errors path="password" class="text-danger" /> */}
-                <div className="txt_field">
-                    <input type="password" path="confirmPassword" required="required" onChange={(e) => setConfirmPassword(e.target.value)}  />
-                    <span></span>
-                    <label path="confirmPassword">Confirm Password</label>
-                </div> 
-                {/* <errors path="confirm" class="text-danger" /> */}
+             
 
 
                 <input type="submit" id="completed" value="Register" />

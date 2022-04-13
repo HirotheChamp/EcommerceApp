@@ -5,21 +5,26 @@ module.exports.index = (request, response) => {
     });
 }
 
-// register: (req, res) => {
-//     User.create(req.body)
-//       .then(user => {
-//           const userToken = jwt.sign({
-//               id: user._id
-//           }, process.env.SECRET_KEY);
-   
-//           res
-//               .cookie("usertoken", userToken, secret, {
-//                   httpOnly: true
-//               })
-//               .json({ msg: "success!", user: user });
-//       })
-//       .catch(err => res.json(err));
-//   }
+module.exports.register = (req, res) => {
+    User.create(req.body)
+    .then(user => {
+        const userToken = jwt.sign({
+            id: user._id
+        }, process.env.SECRET_KEY);
+ 
+        res
+            .cookie("usertoken", userToken, secret, {
+                httpOnly: true
+            })
+            .json({ msg: "success!", user: user });
+    })
+    .catch(err => res.json(err));
+}
+
+module.exports.register = (req, res) => {
+    res.clearCookie('usertoken');
+    res.sendStatus(200);
+}
 
 //create
 module.exports.createUser = (request, response) => {

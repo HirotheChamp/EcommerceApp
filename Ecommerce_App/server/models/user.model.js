@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const UserSchema = new mongoose.Schema({
     userName: { 
     type: String, 
-    required: [true, "Name is required"],
+    required: [true, "Username is required"],
     minlength: [2, "Name must be at least 2 characters"]
 
 },
@@ -27,30 +27,14 @@ email: {
 password: { 
     type: String, 
     required: [true, "Password is required"],
-    minlength: [8, "Name must be at least 8 characters"]
+    minlength: [8, "Password must be at least 8 characters"]
 
 },
 
 
-
-
-
-   
- 
-
 }, 
 { timestamps: true });
-UserSchema.virtual('confirmPassword')
-.get( () => this._confirmPassword )
-.set( value => this._confirmPassword = value );
 
-UserSchema.pre('validate', function(next) {
-     if (this.password !== this.confirmPassword) {
-       this.invalidate('confirmPassword', 'Password must match confirm password');
-   }
-  next();
-   });
-  
   UserSchema.pre('save', function(next) {
     bcrypt.hash(this.password, 10)
       .then(hash => {

@@ -7,7 +7,7 @@ const Login = (props) => {
     const [userName, setUserName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState(null)
-    const [confirmPassword, setConfirmPassword] = useState(null)
+    
     const { id } = useParams();
     const history = useHistory()
     const [refresh, setRefresh] = useState(true)
@@ -16,7 +16,7 @@ const Login = (props) => {
     //     axios.get('http://localhost:8000/api/user/')
     //         .then(res=>{
     //             console.log(res.data)
-    //             setUsers(res.data)})
+    //             })
     //         .catch(err => console.error(err))
     // },[refresh]);
     const onSubmitHandler = e => {
