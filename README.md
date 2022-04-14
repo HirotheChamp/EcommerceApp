@@ -54,7 +54,7 @@ N/A
 
 ## Usage
 
-The app is used similarly to E-bay or Amazon, in the sense that you can make purchases while tracking those purchases. You may also upload your own products to be surveyed and bought on the app.
+The app is used similarly to E-bay or Amazon, in the sense that you can make purchases while tracking those purchases. You may also upload your own products to be surveyed and bought on the app. Both the purchases and uploaded products can be tracked and are done using a map function that is getting information from the database.
 
 <hr></hr>
 
