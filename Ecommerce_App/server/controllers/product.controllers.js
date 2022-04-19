@@ -7,10 +7,10 @@ module.exports.index = (request, response) => {
 
 //create
 module.exports.createProduct = (request, response) => {
-    const {    productName, 
+    const {    productName, price,
        description, imageUrl, category} = request.body;
     Product.create({
-        productName, 
+        productName, price,
         description, imageUrl, category
     })
         .then(newProduct => response.json(newProduct)) //add validations

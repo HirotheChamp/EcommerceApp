@@ -33,8 +33,8 @@ function AddProduct() {
 
         <><Navbar />
             <div className='container'>
-                <input type="search" placeholder="search" id="search" />
-                <Link to='/createproduct'><button>Add Product</button></Link>
+               
+              
 
                 <table>
                     <tbody>
@@ -48,23 +48,23 @@ function AddProduct() {
                             <th>Action</th>
                         </tr>
                         {products && products.map((product, i) => (
-                            <tr>
-                                <td>{product.imageUrl}</td>
+                            <tr className='key' key={product._id} >
+                                <td><img src={product.imageUrl}/></td>
                                 <td>2</td>
                                 <td>{product.productName}</td>
                                 <td>{product.description}</td>
                                 <td>2 (inventory count)</td>
                                 <td>1000 (Quantity sold)</td>
                                 <td>
-                                    <Link to='/edit'>Edit</Link>
+                                <Link to={`/editproduct/${product._id}`}>edit</Link>
                                     <button onClick={() => { deleteProduct(product._id); }} className='close-product delete-button'>Delete</button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-
-                <h3>1</h3> | <h3>2</h3> | <h3>3</h3> | <h3>4</h3>
+                <Link to='/createproduct'><button>Add Product</button></Link>
+              
             </div><Footer /></>
     )
 }

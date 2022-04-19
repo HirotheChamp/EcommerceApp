@@ -12,6 +12,7 @@ import Show from './views/Show'
 import Dashboard from './views/Dashboard'
 import ProductInfo from './views/ProductInfo'
 import Login from './views/Login'
+import EditProduct from './views/EditProduct'
 import Registration from './views/Registration'
 import Profile from './views/Profile'
 import './App.css';
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path="/addproduct">
           <AddProduct />
+        </Route>
+        <Route path="/editproduct">
+          <EditProduct />
         </Route>
         <Route path="/show">
           <Show />

@@ -1,53 +1,37 @@
-import React, {  Component } from 'react';
-import { Link } from 'react-router-dom'
+import axios from 'axios';
+import React, { useEffect, useState} from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 function Main() {
+const [products, setProducts] = useState(null)
+
+useEffect(() =>{
+    axios.get('http://localhost:8000/api/product/')
+    .then(res=>setProducts(res.data))
+    .catch(err=>console.error(err))
+});
+
 
 return (
     <><Navbar/>
     <div className="container">
-            <div className="row mt-5">
-
-                <div className="col">
-                
-                    <div className="card" style={{ width: "25rem" }}>
-                        <div className="card-body">
-                            <input type="search" placeholder="search product" id="search" />
-                            <input type="submit" value="search" id="search-btn" />
-                            <hr></hr>
-                            <li><a href="#" style={{ textDecoration: "none", color: "black" }}>T-shirts</a></li>
-                            <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Shoes</a></li>
-                            <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Cups</a></li>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div className="card mt-5" style={{ width: "50rem" }}>
-
-                    <div className="card mt-5" style={{ width: "20rem" }}>
-                        <div className="card-body">
-                            <h5 className="card-title">Blackbelt</h5>
-
-                            <p className="card-text">19.99</p>
-                        </div>
-                    </div>
-                    <div className="card mt-5" style={{ width: "20rem" }}>
-                        <div className="card-body">
-                            <h5 className="card-title">Blackbelt</h5>
-
-                            <p className="card-text">19.99</p>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
+    <table>
+        
+        <tbody>
+            {   products && products.map((product, i)=>(
+                <tr className='key' key={product._id}>
+                     <td><img src={product.imageUrl}/></td>
+                     
+                    <td><p>Name:</p>{product.productName}</td>
+                   
+                    <td> <p>price:</p>{product.price}</td>
+                    {/* <td><Link to={`/productinfo/${product._id}`} className='btn btn-success'>details</Link> </td> */}
+                </tr>
+               )) 
+            }
+        </tbody>
+</table>
         </div><Footer /></>
 
             );

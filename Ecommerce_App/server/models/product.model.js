@@ -24,6 +24,14 @@ category: {
     minlength: [3, "Category must be at least 3 characters"]
 
 },
+price: { 
+    type: Number, 
+    required: [true, "Price is required"],
+    min: [1, "Product must be at least 1 dollar!"],
+    max: [10000, "Over max amount of $10000!"]
+
+
+},
 
 },{ timestamps: true});
 module.exports.Product = mongoose.model('Product', ProductSchema);
