@@ -60,7 +60,8 @@ The app is used similarly to E-bay or Amazon, in the sense that you can make pur
 
 ## Project Status
 
-Mostly clickable prototype is completed, backend developement implemented but not currently functional. CSS developed on most of the pages. Backend created for adding a product to the page. Login and Registration almost finished. Backend is in developement for registration with some functionality.
+Mostly clickable prototype is completed, backend developement implemented but not currently functional. CSS developed on most of the pages. Backend created for adding a product to the page. Login and Registration almost finished. Backend is in developement for registration with some functionality. Main page displays products that are added by the user
+
 
 <hr></hr>
 
